@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eee;
+  color: #444; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Caveat", cursive; }
+
+.unederline, header p::after, .uvod article .text h4::after, .cta h4::after {
+  display: block;
+  content: "";
+  width: 250px;
+  height: 1.5px;
+  background: orangered;
+  margin: 15px auto 0 auto; }
+
+.container {
+  width: 80%;
+  margin: auto; }
+  @media (max-width: 768px) {
+    .container {
+      width: 90%; } }
+
+/*******
+header
+********/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/header.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center; }
+  @media (max-width: 768px) {
+    header {
+      height: 70vh; } }
+  header p {
+    font-size: 2rem;
+    font-size: 300; }
+    @media (max-width: 768px) {
+      header p {
+        font-size: 1.6rem; } }
+  header h1 {
+    font-size: 7rem; }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem; } }
+
+/*******
+uvod
+********/
+.uvod {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0;
+  text-align: center;
+  flex-wrap: wrap; }
+  .uvod article {
+    flex: 0 0 48%; }
+    @media (max-width: 768px) {
+      .uvod article {
+        flex: 0 0 100%; } }
+    .uvod article img {
+      width: 100%; }
+    .uvod article .text {
+      background-color: #fff;
+      padding: 30px;
+      position: relative;
+      top: -15px; }
+      .uvod article .text h4 {
+        margin: 10px 0;
+        font-size: 1.2rem;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300; }
+        .uvod article .text h4::after {
+          width: 100px; }
+      .uvod article .text h2 {
+        margin: 15px 0;
+        font-size: 2.5rem; }
+      .uvod article .text button {
+        padding: 15px 30px;
+        background-color: orangered;
+        color: #fff;
+        margin-top: 30px;
+        font-size: 1rem;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 20px;
+        font-family: "Caveat", cursive;
+        letter-spacing: 2px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+        .uvod article .text button:hover {
+          cursor: pointer;
+          background: #444;
+          color: #fff;
+          transition: 0.3s ease; }
+
+/*******
+cta
+********/
+.cta {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/cta.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center; }
+  .cta h4 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif; }
+    @media (max-width: 768px) {
+      .cta h4 {
+        font-size: 1.4rem; } }
+  .cta h2 {
+    font-size: 6rem; }
+    @media (max-width: 768px) {
+      .cta h2 {
+        font-size: 3rem;
+        margin-top: 20px; } }
+
+/*******
+galerija
+********/
+.galerija {
+  padding: 70px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .galerija article {
+    flex: 0 0 48%;
+    margin-bottom: 50px; }
+    @media (max-width: 768px) {
+      .galerija article {
+        flex: 0 0 100%; } }
+    .galerija article img {
+      width: 100%;
+      border: 14px solid #fff;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+      .galerija article img:hover {
+        transform: scale(1.1);
+        transition-duration: .7s;
+        border: 15px solid orangered; }
+
+/*******
+footer
+********/
+footer {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #444; }
+  footer a {
+    color: orangered;
+    margin: 0 20px;
+    font-size: 2rem; }
+    footer a i:hover {
+      color: #fff;
+      animation: okrug .7s ease-in-out; }
+@keyframes okrug {
+  100% {
+    transform: rotate(360deg); } }
+  footer p {
+    color: #eee;
+    margin-top: 10px;
+    font-size: 1rem; }
+
+/*# sourceMappingURL=style.css.map */

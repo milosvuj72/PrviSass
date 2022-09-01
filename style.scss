@@ -1,0 +1,230 @@
+@import
+ url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap');
+
+$bodyFont:'Open Sans', sans-serif;
+$headingFont:'Caveat', cursive; 
+$font: 16px;
+$white: #fff;
+$orange: orangered;
+$lightGray: #eee;
+$gray: #444;
+$padding: 70px 0;
+$transition: .3s ease;
+$borderRadius: 20px;
+@mixin btn{
+    padding: 15px 30px;
+    background-color: $orange;
+    color: $white;
+    margin-top: 30px;
+    font-size: 1rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: $borderRadius;
+    font-family: $headingFont;
+    letter-spacing: 2px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+&:hover{
+        cursor: pointer;
+        background: $gray;
+        color: $white;
+        transition: $transition;
+    }
+}
+@mixin back_img{
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-align: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $bodyFont;
+    background-color: $lightGray;
+    color: $gray;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: $headingFont;
+}
+.unederline{
+    display: block;
+    content: "";
+    width: 250px;
+    height: 1.5px;
+    background: $orange;
+    margin: 15px auto 0 auto;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    @media(max-width:768px){
+        width: 90%;
+    }
+}
+/*******
+header
+********/
+header{
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(img/header.jpg);
+    height: 100vh;
+    @include back_img;
+    @media(max-width:768px){
+        height: 70vh;
+    }
+    p{
+        font-size: 2rem;
+        font-size: 300;
+        &::after{
+            @extend .unederline
+        }
+        @media(max-width:768px){
+            font-size: 1.6rem;
+        }
+    }
+    h1{
+        font-size: 7rem;
+        @media(max-width:768px){
+            font-size: 4rem;
+        }
+    }
+}
+/*******
+uvod
+********/
+.uvod{
+    display: flex;
+    justify-content: space-between;
+    padding: $padding;
+    text-align: center;
+    flex-wrap: wrap;
+    article{
+       flex: 0 0 48%;
+       @media(max-width:768px){
+        flex: 0 0 100%;
+       }
+        img{
+            width: 100%;
+        }
+        .text{
+            background-color: $white;
+            padding: 30px;
+            position: relative;
+            top: -15px;
+        h4{
+            margin: 10px 0;
+            font-size: 1.2rem;
+            font-family: $bodyFont;
+            font-weight: 300;
+            &::after{
+                @extend .unederline;
+                width: 100px;
+            }
+        }
+        h2{
+            margin: 15px 0;
+            font-size: 2.5rem;
+        }
+        button{
+            @include btn;
+        }
+        }
+    }
+}
+/*******
+cta
+********/
+.cta{
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(img/cta.jpg);
+    height: 60vh;
+    @include back_img;
+    h4{
+        font-size: 1.7rem;
+        font-weight: 300;
+        font-family: $bodyFont;
+        &::after{
+            @extend .unederline;
+        }
+        @media(max-width:768px){
+            font-size: 1.4rem;
+        }
+    }
+    h2{
+        font-size: 6rem;
+        @media(max-width:768px){
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+    }
+
+}
+
+/*******
+galerija
+********/
+
+.galerija{
+    padding: $padding;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    article{
+        flex: 0 0 48%;
+        @media(max-width:768px){
+            flex: 0 0 100%;
+            
+        }
+        margin-bottom: 50px;
+    img{
+            width: 100%;
+            border: 14px solid $white;
+            border-radius: $borderRadius;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            &:hover{
+                transform: scale(1.1);
+                transition-duration: .7s;
+                border: 15px solid $orange;
+            }
+        }
+    }
+}
+
+/*******
+footer
+********/
+footer{
+    padding: 40px 0;
+    text-align: center;
+    background-color: $gray;
+    a{
+        color: $orange;
+        margin: 0 20px;
+        font-size: 2rem;
+     i{
+        &:hover{
+            color: $white;
+            animation: okrug .7s ease-in-out;
+        }
+        @keyframes okrug{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+p{
+    color: $lightGray;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+}
