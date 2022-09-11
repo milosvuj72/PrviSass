@@ -95,6 +95,16 @@ header{
         @media(max-width:768px){
             font-size: 4rem;
         }
+        span{
+            opacity: 0;
+            display: inline-block;
+            transition: all .3s ease;
+            transform: translateY(50px);
+        }
+        .fadeMove{
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 /*******
