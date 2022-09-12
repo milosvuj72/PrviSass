@@ -137,7 +137,11 @@ cta
       .cta h4 {
         font-size: 1.4rem; } }
   .cta h2 {
-    font-size: 6rem; }
+    font-size: 6rem;
+    background-image: -webkit-linear-gradient(145deg, #a2fe73, #35fdb2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 10s infinite linear; }
     @media (max-width: 768px) {
       .cta h2 {
         font-size: 3rem;
@@ -190,5 +194,11 @@ footer {
     color: #eee;
     margin-top: 10px;
     font-size: 1rem; }
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(360deg); }
+  to {
+    -webkit-filter: hue-rotate(-360deg); } }
 
 /*# sourceMappingURL=style.css.map */
